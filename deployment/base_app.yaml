@@ -47,6 +47,9 @@ metadata:
   #annotations:
   # This annotation is only required if you are creating an internal facing ELB. Remove this annotation to create public facing ELB.
   #service.beta.kubernetes.io/aws-load-balancer-internal: "true"
+  service.beta.kubernetes.io/aws-load-balancer-subnets: subnet-02e03a9051b473138, subnet-0aa4d9e391b134823
+  service.beta.kubernetes.io/aws-load-balancer-nlb-target-type: ip
+  service.beta.kubernetes.io/aws-load-balancer-scheme: internet-facing  
   name: frontend-node
   namespace: prodcatalog-ns
   labels:
