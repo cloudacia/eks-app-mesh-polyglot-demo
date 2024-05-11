@@ -4,6 +4,8 @@ metadata:
   name: {{ .Values.frontend.name }}
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-scheme: "internet-facing"
+    service.beta.kubernetes.io/aws-load-balancer-subnets: subnet-02e03a9051b473138, subnet-0aa4d9e391b134823
+    service.beta.kubernetes.io/aws-load-balancer-nlb-target-type: ip  
   namespace: {{ .Values.frontend.namespace }}
   labels:
     app: {{ .Values.frontend.name }}
